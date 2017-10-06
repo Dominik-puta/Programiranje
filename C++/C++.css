@@ -4,6 +4,7 @@
     padding: 20px;
     color: white;
 }
+
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -23,9 +24,19 @@
             background-color: #ddd;
             color: black;
         }
+
 body {
     font-size: 20px;
     background-color: #F1F1F1;
+}
+
+.coderoom {
+    background-color: #1E1E1E;
+    color: white;
+    width: 900px;
+    border: 2px solid green;
+    padding: 25px;
+    margin: 2px;
 }
 .coderoom {
     background-color: #1E1E1E;

@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>C++</title>
+    <link rel="stylesheet" type="text/css" href="C++.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>C++</h1>
+    </div>
+    <div class="topnav">
+        <a href="../index.html" class="fa fa-home" style="font-size: 24px"></a>
+        <a href="../Python/Python.html">Python</a>
+        <a href="../C++/C++.html">C++</a>
+        <a href="#">C#</a>
+        <a href="#">HTML</a>
+        <a href="#">Java</a>
+        <a href="#">C</a>
+        <a href="#">CSS</a>
+        <a href="#">JS</a>
+        <a href="#">Swift</a>
+    </div>
+    <h2>O C++</h2>
+    <p>
+        C++ je programski jezik opće namjene i srednje razine s podrškom za objektno orijentirano programiranje.<br />
+        Prvotno je razvijan u Bell Labs (laboratoriju telekomunikacijske tvrtke Bell) pod rukovodstvom Bjarnea Stroustrupa tokom 1980-ih,<br />
+        i to kao proširenje programskom jeziku C pa mu je originalno ime bilo "C with classes" (eng. C s klasama).<br />
+        Zbog velike potražnje za objektno orijentiranim jezicima te izrazitim sposobnostima istih,<br />
+        specifikacija programskog jezika C++ ratificirana je 1998. kao standard ISO/IEC 14882.<br />
+    </p>
+    <h2>
+        Povijest razvoja.
+    </h2>
+    <p>
+        Godine 1979. Bjarne Stroustrup, danski računalni znanstvenik iz Bell Labsa,<br />
+        započeo je razvoj C++ jezika kojeg je prvo nazvao "C" s klasama koji je bio preteća za C++.<br />
+        Poticaj za stvaranje novog programskog jezika proisteklo je iz njegovog rada na dokorskoj disertaciji u kojem se susreo s dilemom<br />
+        gdje je programski jezik Simula bio dobar za složene programske projekte, dok je programski jezik BCPL bio brz ali je bio na jako niskoj razini da bude praktičan za primjenu.<br />
+        Kada je Stroustrup počeo raditi za AT&Tove Bell laboratorije, i kada je počeo analizirati jezgru operacijskog sustava UNIX za distribuirano računarstvo.<br />
+        Za taj problem primjenio je svoje iskustvo iz svog doktorskog rada, tako što je počeo dodavati produžetke koje postoje u jeziku Simula za programski jezik C,<br />
+        kojeg je on rabio jer je bio dostupan, brz, i lako prenosiv na druge platforme.<br />
+        Ovaj produženi C programski jezik, prvo se zvao "C s klasama" no će formalno dobiti naziv C++ krajem 1983.,<br />
+        uzimajući da je "++" znak za povećavanje u programskom jeziku C. U listopadu 1985.<br />
+        godine prva komercijalna distribucija jezika predstavljena je javnosti u knjizi The C++ Programming Language čiji je autor spomenuti Bjarne Stroustrup.<br />
+    </p>
+    <h2>Sintaksa i pravila</h2>
+    <h4>Vrste Podataka</h4>
+    <ul>
+        <li>Znakovni: char, wchar_t
+        <li>Cijeli brojevi: short, int, long, long long
+        <li>Brojevi s decimalnim zarezom: float, double, long double
+        <li>Logički (Boolean): bool
+        <li>Praznine: void
+    </ul>
+    <p>Objektno orijentiran</p>
+    <pre class="prettyprint">
+            enum Bottle { BeerBottle };
+
+class Shelf {
+    unsigned BottlesLeft;
+public:
+    Shelf( unsigned bottlesbought )
+        : BottlesLeft( bottlesbought )
+        {}
+    void TakeOneDown()
+        {
+        if (!BottlesLeft)
+            throw BeerBottle;
+        BottlesLeft--;
+        }
+    operator int () { return BottlesLeft; }
+    };
+
+int main( int, char ** )
+    {
+    Shelf Beer(99);
+    try {
+        for (;;) {
+            char *plural = (int)Beer !=1 ? "s" : "";
+            cout << (int)Beer << " bottle" << plural
+                 << " of beer on the wall," << endl;
+            cout << (int)Beer << " bottle" << plural
+                 << " of beer," << endl;
+            Beer.TakeOneDown();
+            cout << "Take one down, pass it around," << endl;
+            plural = (int)Beer !=1 ? "s":"";
+            cout << (int)Beer << " bottle" << plural
+                 << " of beer on the wall." << endl;
+            }
+        }
+    catch ( Bottle ) {
+        cout << "Go to the store and buy some more," << endl;
+        cout << "99 bottles of beer on the wall." << endl;
+        }
+    return 0;
+    }
+    </pre>
+    <p>meta</p>
+    <pre class="prettyprint" >
+        
+// 99 bottles of beer, C++ template 'meta-programming' version
+// By Arion Lei (philipl@cs.ust.hk)
+
+#include &lt;iostream.h>
+
+template&lt;int I>
+class Loop {
+public:
+  static inline void f () {
+    cout << I << " bottles of beer on the wall," << endl
+         << I << " bottles of beer." << endl
+         << "Take one down, pass it around," << endl
+         << I-1 << " bottles of beer on the wall." << endl;
+    Loop&lt;I-1>::f();
+  } 
+}; 
+
+class Loop&lt;0> {
+public:
+  static inline void f () {
+    cout << "Go to the store and buy some more," << endl
+         << "99 bottles of beer on the wall." << endl;
+  }
+};
+
+
+int main () {
+  Loop&lt;3>::f();
+  return 0;
+}
+               
+</pre>
+</body>
+</html>

@@ -3,9 +3,10 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Python</title>
     <link rel="stylesheet" type="text/css" href="Python.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
 </head>
 <body>
     <div class="header">
@@ -14,7 +15,7 @@
     <div class="topnav">
         <a href="../index.html" class="fa fa-home" style="font-size: 24px"></a>
         <a href="../Python/Python.html">Python</a>
-        <a href="#">C++</a>
+        <a href="../C++/C++.html">C++</a>
         <a href="#">C#</a>
         <a href="#">HTML</a>
         <a href="#">Java</a>
@@ -56,53 +57,56 @@
         <p>
             Pošto je python vrlo popularan programski jezik ima i mnogo frameworka.<br />
         </p>
-    <ul>
-        Za web:
-        <li>Django</li>
-        <li>Pyramid</li>
-        <li>Flask</li>
-        <li>Bottle</li>
-        <br />
-        Za znanost i kalkulacije:
-        <li>Scipy</li>
-        <li>Pandas</li>
-        <li>IPython</li>
-        <br />
-        Za Desktop GUI
-        <li>wxWidgets</li>
-        <li>Kivy</li>
-        <li>Qt via pyqt ili pyside</li>
-        <li>GT+</li>
-        <br />
-        Za Software
-        <li>Scons</li>
-        <li>Buildbot</li>
-        <li>Apache Gump</li>
-        <li>Roundup</li>
-        <br />
-        <br />
-    </ul>
+        <ul>
+            Za web:
+            <li>Django</li>
+            <li>Pyramid</li>
+            <li>Flask</li>
+            <li>Bottle</li>
+            <br />
+            Za znanost i kalkulacije:
+            <li>Scipy</li>
+            <li>Pandas</li>
+            <li>IPython</li>
+            <br />
+            Za Desktop GUI
+            <li>wxWidgets</li>
+            <li>Kivy</li>
+            <li>Qt via pyqt ili pyside</li>
+            <li>GT+</li>
+            <br />
+            Za Software
+            <li>Scons</li>
+            <li>Buildbot</li>
+            <li>Apache Gump</li>
+            <li>Roundup</li>
+            <br />
+            <br />
+        </ul>
     </div>
-    <div class="coderoom">
-        #!/usr/bin/env python<br />
-        # -*- coding: iso-8859-1 -*-<br />
-        """<br />
-        99 Bottles of Beer (by Gerold Penz)<br />
-        Python can be simple, too :-)<br />
-        """<br />
-        <br />
-        for quant in range(99, 0, -1):<br />
-        if quant > 1:<br />
-        print quant, "bottles of beer on the wall,", quant, "bottles of beer."<br />
-        if quant > 2:<br />
-        suffix = str(quant - 1) + " bottles of beer on the wall."<br />
-        else:<br />
-        suffix = "1 bottle of beer on the wall."<br />
-        elif quant == 1:<br />
-        print "1 bottle of beer on the wall, 1 bottle of beer."<br />
-        suffix = "no more beer on the wall!"<br />
-        print "Take one down, pass it around,", suffix<br />
-        print "--"<br />
+    <h2>Sintaksa u Pythonu</h2>
+    <div class="prettyprint" >
+<pre class="prettyprint">
+            #!/usr/bin/env python
+# -*- coding: iso-8859-1 -*-
+"""
+99 Bottles of Beer (by Gerold Penz)
+Python can be simple, too :-)
+"""
+
+for quant in range(99, 0, -1):
+   if quant > 1:
+      print quant, "bottles of beer on the wall,", quant, "bottles of beer."
+      if quant > 2:
+         suffix = str(quant - 1) + " bottles of beer on the wall."
+      else:
+         suffix = "1 bottle of beer on the wall."
+   elif quant == 1:
+      print "1 bottle of beer on the wall, 1 bottle of beer."
+      suffix = "no more beer on the wall!"
+   print "Take one down, pass it around,", suffix
+   print "--"
+</pre>
     </div>
 </body>
 </html>
