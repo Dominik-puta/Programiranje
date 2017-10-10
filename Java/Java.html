@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Java</title>
+    <link rel="stylesheet" type="text/css" href="Java.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Java</h1>
+    </div>
+    <div class="topnav">
+        <a href="../index.html" class="fa fa-home" style="font-size: 24px"></a>
+        <a href="../Python/Python.html">Python</a>
+        <a href="../C++/C++.html">C++</a>
+        <a href="../Csharp/Csharp.html">C#</a>
+        <a href="../HTML/HTML.html">HTML</a>
+        <a href="../Java/Java.html">Java</a>
+        <a href="#">C</a>
+        <a href="#">CSS</a>
+        <a href="#">JS</a>
+        <a href="#">Swift</a>
+    </div>
+    <div class="box">
+        <h2>O Javi</h2>
+        <p>
+            Java je objektno orijentirani programski jezik koji su razvili James Gosling, Patrick Naughton i drugi inženjeri u tvrtci Sun Microsystems.<br />
+            Razvoj je počeo 1991, kao dio projekta Green, a objavljen je u studenom 1995.<br />
+            Tvrtka Sun posjeduje trademark na ime Java, ali samo okruženje je moguće bez plaćanja skinuti sa Sunovih internet poslužitelja.<br />
+            Velika prednost u odnosu na većinu dotadašnjih programskih jezika je to što se programi pisani u Javi mogu izvoditi bez preinaka na svim operativnim sustavima za koje postoji JVM (Java Virtual Machine),<br />
+            dok je klasične programe pisane primjerice u C-u potrebno prilagođavati platformi(Operacijskom sustavu) na kojem se izvode.
+        </p>
+    </div>
+    <div class="box">
+        <h2>Filozofija</h2>
+        <ul>
+            
+            <h4>Pet osnovnih razloga za razvoj Jave su:</h4>
+
+            <li>treba da koristi objektno orijentisane metodologije
+            <li> treba da se isti program izvršava na mnogim operativnim sistemima
+            <li> treba da sadrži (built-in) podršku za računarske mreže
+            <li>treba da izvrši programe sa (geografski) udaljenih servera sa sigurnošću
+            <li>treba da bude jednostavan za upotrebu i da posudi korisne stvari od starijih objektno orijentisanih jezika, poput C++.
+            <li>Da bi postigli mrežnu podršku i izvršavanje programa na udaljenim serverima, Java programeri ponekad moraju koristiti dodatke poput CORBA ili OSGi.
+        </ul>
+        <h4>Objektno orijentirano</h4>
+        <p>Osnovni koncept u Javi je klasa (eng. class), tj. sav izvorni kod je napisan unutar klasa. U pravilu, svaka klasa je deklarirana unutar datoteke sa istim imenom i sufiksom .java.<br />
+        Ovo pravilo je donekle nametnuto kompajlerom koji zahtijeva da su imena klasa i datoteka ista (osim tzv. unutrašnjih klasa, eng. inner classes).<br />
+        Osnovni tipovi u Javi, poput int, boolean, byte i sl. su također predstavljeni u klasama (napomena: Reflection types) i imaju odgovarajuće klasne omote poput java.lang.Integer, java.lang.Boolean i java.lang.Byte.</p>
+    </div>
+    <div class="box">
+        <h2>Sintaksa</h2>
+        <p>Iako je Java nastala od C++, ali za razliku od C++, koji dozvoljava struktuirane kao i objektno orijentirane principe, u Javi su objektno orijentirani principi obavezni. Sve je u Javi objekt, a sav izvorni kod je pisan unutar klasa.</p>
+        <pre class="prettyprint">
+        
+// java version of 99 bottles of beer on the wall
+// 1995 Sean Russell (ser@cs.uoregon.edu)
+
+class bottles
+{
+  public static void main(String args[])
+    {
+    String s = "s";
+    for (int beers=99; beers>-1;)
+      {
+      System.out.print(beers + " bottle" + s + " of beer on the wall, ");
+      System.out.println(beers + " bottle" + s + " of beer, ");
+      if (beers==0)
+        {
+        System.out.print("Go to the store, buy some more, ");
+        System.out.println("99 bottles of beer on the wall.\n");
+        System.exit(0);
+        }
+      else
+        System.out.print("Take one down, pass it around, ");
+      s = (--beers == 1)?"":"s";
+      System.out.println(beers + " bottle" + s + " of beer on the wall.\n");
+      }
+    }
+}         
+</pre>
+      
+    </div>
+</body>
+</html>
