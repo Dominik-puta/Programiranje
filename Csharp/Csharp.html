@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>C#</title>
+    <link rel="stylesheet" type="text/css" href="Csharp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>C#</h1>
+    </div>
+    <div class="topnav">
+        <a href="../index.html" class="fa fa-home" style="font-size: 24px"></a>
+        <a href="../Python/Python.html">Python</a>
+        <a href="../C++/C++.html">C++</a>
+        <a href="../Csharp/Csharp.html">C#</a>
+        <a href="../HTML/HTML.html">HTML</a>
+        <a href="#">Java</a>
+        <a href="#">C</a>
+        <a href="#">CSS</a>
+        <a href="#">JS</a>
+        <a href="#">Swift</a>
+    </div>
+    <div class="box">
+        <h2>O C#-u</h2>
+        <p>
+            C# (izgovara se C-sharp) je objektno orijentirani programski jezik kojeg su razvili Anders Hejlsberg i drugi u tvrtci Microsoft.<br />
+            C# je izumljen s ciljem da .NET platforma dobije programski jezik, koji bi maksimalno iskoristio njezine sposobnosti. Sličan je programskim jezicima Java i C++.
+        </p>
+    </div>
+    <div class="box">
+        <h2>Povijest</h2>
+        <p>
+            tijekom razvoja .NET frameworka, Class Libraries su bili prvobitno napisani u SMC-u (Simple Managed C).<br />
+            U 1999. godini Anders Hejlsberg je formirao tim s ciljem da naprave novi programski jezik.<br />
+            Prvobitno se zvao Cool (C-like object oriented language). Microsoft je htio zadržati naziv, ali na kraju nisu zbog copyright-a.<br />
+            Jezik su javno najavili u 2000. godini, te su ga tad preimenovali u C# i prebacili ASP.NET na njega.<br />
+            James Gosling je rekao da je C# gotovo indentičan njegovom programskom jezik Java samo što nema sigurnost, pouzdanost, produktivnost. <br />
+        </p>
+
+        <p>puna lista dodataka u C#-u</p>
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <button id="myBtn" class="button">Klikni za više!</button>
+
+    </div>
+
+    <!-- Modal content -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+                <pre>
+ C# 2.0
+    Generics
+    Partial types
+    Anonymous methods
+    Iterators
+    Nullable types
+    Getter/setter separate accessibility
+    Method group conversions (delegates)
+    Co- and Contra-variance for delegates
+    Static classes
+    Delegate inference
+ C# 3.0
+    Implicitly typed local variables
+    Object and collection initializers
+    Auto-Implemented properties
+    Anonymous types
+    Extension methods
+    Query expressions
+    Lambda expression
+    Expression trees
+    Partial methods
+ C# 4.0
+    Dynamic binding
+    Named and optional arguments
+    Generic co- and contravariance
+    Embedded interop types ("NoPIA")
+ C# 5.0
+    Asynchronous methods
+    Caller info attributes
+ C# 6.0
+    Compiler-as-a-service (Roslyn)
+    Import of static type members into namespace
+    Exception filters
+    Await in catch/finally blocks
+    Auto property initializers
+    Default values for getter-only properties
+    Expression-bodied members
+    Null propagator (null-conditional operator, succinct null checking)
+    String interpolation
+    nameof operator
+    Dictionary initializer
+ C# 7.0
+    Out variables
+    Pattern matching
+    Tuples
+    Deconstruction
+    Local functions
+    Digit separators
+    Binary literals
+    Ref returns and locals
+    Generalized async return types
+    Expression bodied constructors and finalizers
+    Expression bodied getters and setters
+ C# 7.1
+    Async main
+    Default expressions
+</pre>
+            </div>
+        </div>
+
+    </div>
+    <div class="box">
+        <h2>Sintaksa</h2>
+        <p>
+            Sintaksa C#-a je vrlo slična Javi i C-u. To je:<br />
+            sa Točka zarezom završavamo komandu.<br />
+            koriste se krivudave zagrade da grupiraju komande u klase.<br />
+        </p>
+        <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <pre class="prettyprint">
+/**
+ * This little program generate the lyrics to the song 
+ * 99 Bottles of Beer as an output. 
+ * In case you do not know the song, you will find the lyrics 
+ * to the song here:
+ * http://www.99-bottles-of-beer.net/lyrics.html
+ *
+ * This version is made for manycore processors, 
+ * i.e. this is not a cluster version!
+ * More information on site http://www.parallelcsharp.com
+ *
+ **/
+using System;
+
+public class Bottles99 {
+ static string getPart( int nBottles ) { 
+  // Just a helper function which spells "bottles"...
+  return nBottles == 1 ? 
+   "1 bottle" : nBottles == 0 ? "no more bottles" : nBottles + " bottles";
+ }
+
+ static async SingAndDrink() & static void PassMicrophone( int nBottles ) {
+  string bottles = getPart( nBottles );
+  Console.WriteLine( bottles.Replace('n','N') + " of beer on the wall, " + 
+   bottles + " of beer." );
+
+  nBottles--;
+  bottles = getPart( nBottles );
+
+  if (nBottles >= 0) Console.WriteLine( 
+   "Take one down and pass it around, " + bottles + " of beer on the wall." );
+  else Console.WriteLine( 
+   "Go to the store and buy some more, 99 bottles of beer on the wall." );
+  Console.WriteLine();
+
+  if ( nBottles >= 0 ) PassMicrophone( nBottles );
+ }
+
+ public static void Main( string[] args ) {
+  for ( int i = 0; i < 100; i++ ) 
+   Bottles99.SingAndDrink(); // We'll have 100 singers
+  Bottles99.PassMicrophone( 99 );
+ }
+}
+    </pre><pre class="prettyprint">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace _99Bottlez
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int countOfBottles = 10;
+            string lineTemplate = @"{X} bottles of beer on the wall, {X} bottles 
+                                  of beer. Take one down and pass it around, {Y} 
+                                  bottles of beer on the wall.";
+
+            string lastLine =  @"No more bottles of beer on the wall, no more   
+                               bottles of beer.Go to the store and buy some 
+                               more, {X} bottles of beer on the wall.";
+
+            List&lt;string> songLines = new List&lt;string> ();
+            Enumerable.Range(1, countOfBottles)
+                .Reverse()
+                .ToList()
+                .ForEach
+                 (c => songLines.Add(lineTemplate.Replace("{X}", 
+                 c.ToString()).Replace("{Y}", (c-1)!=0?(c - 1).ToString():@" No 
+                 more bottles of beer on the wall.")));
+            
+            //Add the last line
+            songLines.Add(lastLine.Replace("{X}", countOfBottles.ToString()));
+
+            songLines.ForEach(c => Console.WriteLine(c));
+            Console.ReadLine();
+        }
+    }
+}    </pre>
+    </div>
+</html>

@@ -16,48 +16,53 @@
         <a href="../index.html" class="fa fa-home" style="font-size: 24px"></a>
         <a href="../Python/Python.html">Python</a>
         <a href="../C++/C++.html">C++</a>
-        <a href="#">C#</a>
-        <a href="#">HTML</a>
+        <a href="../Csharp/Csharp.html">C#</a>
+        <a href="../HTML/HTML.html">HTML</a>
         <a href="#">Java</a>
         <a href="#">C</a>
         <a href="#">CSS</a>
         <a href="#">JS</a>
         <a href="#">Swift</a>
     </div>
-    <h2>O C++</h2>
-    <p>
-        C++ je programski jezik opće namjene i srednje razine s podrškom za objektno orijentirano programiranje.<br />
-        Prvotno je razvijan u Bell Labs (laboratoriju telekomunikacijske tvrtke Bell) pod rukovodstvom Bjarnea Stroustrupa tokom 1980-ih,<br />
-        i to kao proširenje programskom jeziku C pa mu je originalno ime bilo "C with classes" (eng. C s klasama).<br />
-        Zbog velike potražnje za objektno orijentiranim jezicima te izrazitim sposobnostima istih,<br />
-        specifikacija programskog jezika C++ ratificirana je 1998. kao standard ISO/IEC 14882.<br />
-    </p>
-    <h2>
-        Povijest razvoja.
-    </h2>
-    <p>
-        Godine 1979. Bjarne Stroustrup, danski računalni znanstvenik iz Bell Labsa,<br />
-        započeo je razvoj C++ jezika kojeg je prvo nazvao "C" s klasama koji je bio preteća za C++.<br />
-        Poticaj za stvaranje novog programskog jezika proisteklo je iz njegovog rada na dokorskoj disertaciji u kojem se susreo s dilemom<br />
-        gdje je programski jezik Simula bio dobar za složene programske projekte, dok je programski jezik BCPL bio brz ali je bio na jako niskoj razini da bude praktičan za primjenu.<br />
-        Kada je Stroustrup počeo raditi za AT&Tove Bell laboratorije, i kada je počeo analizirati jezgru operacijskog sustava UNIX za distribuirano računarstvo.<br />
-        Za taj problem primjenio je svoje iskustvo iz svog doktorskog rada, tako što je počeo dodavati produžetke koje postoje u jeziku Simula za programski jezik C,<br />
-        kojeg je on rabio jer je bio dostupan, brz, i lako prenosiv na druge platforme.<br />
-        Ovaj produženi C programski jezik, prvo se zvao "C s klasama" no će formalno dobiti naziv C++ krajem 1983.,<br />
-        uzimajući da je "++" znak za povećavanje u programskom jeziku C. U listopadu 1985.<br />
-        godine prva komercijalna distribucija jezika predstavljena je javnosti u knjizi The C++ Programming Language čiji je autor spomenuti Bjarne Stroustrup.<br />
-    </p>
-    <h2>Sintaksa i pravila</h2>
-    <h4>Vrste Podataka</h4>
-    <ul>
-        <li>Znakovni: char, wchar_t
-        <li>Cijeli brojevi: short, int, long, long long
-        <li>Brojevi s decimalnim zarezom: float, double, long double
-        <li>Logički (Boolean): bool
-        <li>Praznine: void
-    </ul>
-    <p>Objektno orijentiran</p>
-    <pre class="prettyprint">
+    <div class="box">
+        <h2>O C++</h2>
+        <p>
+            C++ je programski jezik opće namjene i srednje razine s podrškom za objektno orijentirano programiranje.<br />
+            Prvotno je razvijan u Bell Labs (laboratoriju telekomunikacijske tvrtke Bell) pod rukovodstvom Bjarnea Stroustrupa tokom 1980-ih,<br />
+            i to kao proširenje programskom jeziku C pa mu je originalno ime bilo "C with classes" (eng. C s klasama).<br />
+            Zbog velike potražnje za objektno orijentiranim jezicima te izrazitim sposobnostima istih,<br />
+            specifikacija programskog jezika C++ ratificirana je 1998. kao standard ISO/IEC 14882.<br />
+        </p>
+    </div>
+    <div class="box">
+        <h2>
+            Povijest razvoja.
+        </h2>
+        <p>
+            Godine 1979. Bjarne Stroustrup, danski računalni znanstvenik iz Bell Labsa,<br />
+            započeo je razvoj C++ jezika kojeg je prvo nazvao "C" s klasama koji je bio preteća za C++.<br />
+            Poticaj za stvaranje novog programskog jezika proisteklo je iz njegovog rada na dokorskoj disertaciji u kojem se susreo s dilemom<br />
+            gdje je programski jezik Simula bio dobar za složene programske projekte, dok je programski jezik BCPL bio brz ali je bio na jako niskoj razini da bude praktičan za primjenu.<br />
+            Kada je Stroustrup počeo raditi za AT&Tove Bell laboratorije, i kada je počeo analizirati jezgru operacijskog sustava UNIX za distribuirano računarstvo.<br />
+            Za taj problem primjenio je svoje iskustvo iz svog doktorskog rada, tako što je počeo dodavati produžetke koje postoje u jeziku Simula za programski jezik C,<br />
+            kojeg je on rabio jer je bio dostupan, brz, i lako prenosiv na druge platforme.<br />
+            Ovaj produženi C programski jezik, prvo se zvao "C s klasama" no će formalno dobiti naziv C++ krajem 1983.,<br />
+            uzimajući da je "++" znak za povećavanje u programskom jeziku C. U listopadu 1985.<br />
+            godine prva komercijalna distribucija jezika predstavljena je javnosti u knjizi The C++ Programming Language čiji je autor spomenuti Bjarne Stroustrup.<br />
+        </p>
+    </div>
+    <div class="box">
+        <h2>Sintaksa i pravila</h2>
+        <h4>Vrste Podataka</h4>
+        <ul>
+            <li>Znakovni: char, wchar_t
+            <li>Cijeli brojevi: short, int, long, long long
+            <li>Brojevi s decimalnim zarezom: float, double, long double
+            <li>Logički (Boolean): bool
+            <li>Praznine: void
+        </ul>
+        <p>Objektno orijentiran</p>
+        <pre class="prettyprint">
             enum Bottle { BeerBottle };
 
 class Shelf {
@@ -99,8 +104,8 @@ int main( int, char ** )
     return 0;
     }
     </pre>
-    <p>meta</p>
-    <pre class="prettyprint" >
+        <p>meta</p>
+        <pre class="prettyprint">
         
 // 99 bottles of beer, C++ template 'meta-programming' version
 // By Arion Lei (philipl@cs.ust.hk)
@@ -134,5 +139,6 @@ int main () {
 }
                
 </pre>
+    </div>
 </body>
 </html>

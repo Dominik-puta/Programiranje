@@ -4,6 +4,7 @@
     padding: 20px;
     color: white;
 }
+
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -23,17 +24,22 @@
             background-color: #ddd;
             color: black;
         }
+
 body {
     font-size: 20px;
-    background-color: #F1F1F1;
+    background-color: #f1f1f1;
 }
-.coderoom {
-    background-color: #1E1E1E;
-    color: white;
-    width: 900px;
-    border: 2px solid green;
-    padding: 25px;
-    margin: 2px;
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    color:grey;
 }
 .box {
     background-color: white;
