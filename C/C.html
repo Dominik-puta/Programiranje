@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>C</title>
+    <link rel="stylesheet" type="text/css" href="C.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>C</h1>
+    </div>
+    <div class="topnav">
+        <a href="../index.html" class="fa fa-home" style="font-size: 24px"></a>
+        <a href="../Python/Python.html">Python</a>
+        <a href="../C++/C++.html">C++</a>
+        <a href="../Csharp/Csharp.html">C#</a>
+        <a href="../HTML/HTML.html">HTML</a>
+        <a href="../Java/Java.html">Java</a>
+        <a href="../C/C.html">C</a>
+        <a href="#">CSS</a>
+        <a href="#">JS</a>
+        <a href="#">Swift</a>
+    </div>
+    <div class="box">
+        <h2>O C-u</h2>
+        <p>
+            C je jezik opće namjene, što znači da se u njemu može napraviti apsolutno sve: od rješavanja zadataka, do pisanja drivera, operacijskih susatava, tekst procesora ili igara.<br />
+            C, kao jezik, ni u čemu ne ograničava. Omogućuje i uključivanje naredbi pisanih asemblerski, zbog čega je zajedno s mogućnošću direktnog pristupa pojedinim bitovima,<br />
+            bajtovima ili cijelim blokovima memorije, pogodan za pisanje sistemskog softvera. Zbog tih karakteristika C je među popularnijim programskim jezicima i rabe ga mnogi programeri.<br />
+            Rezultat toga je postojanje velikog broja prevoditelja za C i alata te stalno dostupne pomoći na internetu. Programi pisani u C-u su prenosivi <br />
+            (mogu se prevoditi i izvršavati na različitim porodicama računala uz minimalne ili nikakve ispravke) i obično su vrlo brzi. Postoje mnogi prevoditelji za jezik C, a jedan od najšire korištenih je GNU C Compiler.
+        </p>
+    </div>
+    <div class="box">
+        <h2>Povijest razvoja</h2>
+        <img src="Ken_n_dennis.jpg" style="float:right" />
+        <p>
+            Autor ovog programskog jezika je Dennis Ritchie, no značajan doprinos nastanku C-a dali su Ken Thompson kao autor programskog jezika B i Martin Richards, autor programskog jezika BCPL.<br />
+            Dennis Ritchie je stvorio ovaj programski jezik za rješavanje praktičnih problema kodiranja sistemskih programa i jezgre operacijskog sustava UNIX, koji je praktički u cijelosti napisan u C-u.<br />
+            Programski jezik C dosta se mijenjao tokom godina te je u više navrata neformalno i formalno standardiziran. Prva važnija inačica poznata je pod nazivom "K&R C",<br />
+            što je engl. kratica prezimena dvaju autora najpoznatijeg C priručnika "The C Programming Language", a to su Brian Kernighan i Dennis Ritchie.<br />
+            Prvo izdanje te vrlo sažeto i precizno pisane knjige koje datira iz 1978. godine ujedno je de facto standardiziralo jezik u 70-ima. Drugo izdanje iz 1988. godine opisuje "ANSI C",<br />
+            standard kojeg je 1983. godine definirao američki nacionalni institut za standardizaciju, a koji je i danas najbolje podržan. <br />
+            Donedavni je standard bio ISO/IEC standard skraćeno poznat kao "C99", no krajem 2011. usvojen je ISO/IEC 9899:2011, poznat kao "C11", za koji su kompajleri još u razvoju.<br />
+            Kao jedan od najvažnijih jezika u povijesti komercijalne računalne industrije, C je do danas ostao jedini programski jezik prilagođen za sve računalne platforme,<br />
+            od malih sustava pa do mrežnih superračunala. Programi napisani u njemu vrlo su bliski načinu rada hardvera te u načelu zahtijevaju od programera dobro razumijevanje rada procesora, memorije, ulazno-izlaznih sklopova itd.<br />
+            No, rad s registrima procesora i adresiranje memorije apstrahirani su pomoću koncepta varijabli i pokazivača što uz eksplicitne kontrolne strukture i funkcije znatno olakšava programiranje u odnosu na izravno programiranje u strojnim jezicima.<br />
+
+        </p>
+    </div>
+    <div class="box">
+        <h2>Struktura programa pisanog u C-u</h2>
+        <p>
+            Najjednostavniji program je onaj koji zadani tekst ispisuje na ekran.<br />
+            Da bi se mogao ispravno napisati čak i tako jednostavan program, potrebno je poznavati strukturu programa odabranog programskog jezika.<br />
+            Struktura programa odnosi se na način pisanja programa i ako se ona ne poštuje, program neće raditi, bez obzira na to što su uporabljene sve potrebne naredbe.<br />
+            Svaki program pisan u programskom jeziku C sastavljen je od niza funkcija. Glavna i jedina obavezna funkcija u programu je funkcija main( ). Program se može sastojati i od većeg broja funkcija.<br />
+            Bitna razlika između C-a i ostalih programskih jezika je u tome što u C-u ne postoje ugrađene funkcije. One se nalaze u bibliotekama funkcija koje se isporučuju zajedno s prevoditeljem.<br />
+            Biblioteke funkcija nastale su standardizacijom C-a, pa je dovoljno na početku programa najaviti da će se upotrebljavati određena biblioteka i u cijelom programu dostupne su sve funkcije koje se u njoj nalaze.<br />
+            Tako se biblioteka u kojoj se nalaze funkcije za ulaz i izlaz podataka naziva stdio.h, matematičke funkcije nalaze se u biblioteci math.h, a funkcije za rad sa znakovnim varijablama u biblioteci string.h.<br />
+            Na početku svakog C programa uobičajeno je pisati pretprocesorske naredbe kojima se pozivaju biblioteke funkcija koje se rabe u programu. Opći oblik te naredbe je: #naredba parametri.<br />
+            Najčešće upotrebljavana pretprocesorska naredba je: #include &lt;ime datoteke><br />
+            i obavezno se piše prije funkcije main( ). Prevođenjem programa na mjesto naredbe #include kopira se sadržaj navedene datoteke.<br />
+            Isto tako, prije samog pisanja programa treba istaknuti da se programi napisani u C-u sastoje od niza međusobno povezanih funkcija čiji broj nije ograničen. U svakom programu je obavezna samo jedna funkcija - funkcija main( ) koja označava mjesto na kojem počinje izvršavanje programa. Početak i kraj funkcije označava se vitičastim zagradama. Nakon svake naredbe u C-u mora stajati znak ; koji (kao i u Pascalu) označava kraj jedne i početak druge naredbe.
+        </p>
+    </div>
+    <div class="box">
+        <h2>Sintaksa</h2>
+        <pre class="prettyprint">
+/*  The 99 Bottles of Beer Linux Kernel Module v1.1
+ *  (supports multiple driver instances)
+ *
+ *  by Stefan Scheler &lt;sts[at]synflood[dot]de>
+ *  August 2nd, 2005 - Ernstthal, Germany
+ *
+ *  Usage:
+ *  1) compile the module
+ *  2) create the device: mknod /dev/bottles c 240 0
+ *  3) load the module: insmod bottles.ko
+ *  4) print the song with: cat /dev/bottles
+ */
+
+#include &lt;linux/fs.h>
+#include &lt;linux/version.h>
+#include &lt;linux/module.h>
+#include &lt;linux/init.h>
+#include &lt;asm/uaccess.h>
+
+#define DRIVER_MAJOR 240
+#define BUFFERSIZE 160
+#define PLURALS(b) (b>1)?"s":""
+
+MODULE_AUTHOR("Stefan Scheler &lt;sts[at]synflood[dot]de>");
+MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("The 99 Bottles of Beer Linux Kernel Module");
+MODULE_SUPPORTED_DEVICE("Bottle of Beer");
+
+struct _instance_data {
+    int bytes_avail, bytes_sent, bottles;
+    char buf[BUFFERSIZE];
+};
+
+static void fill_buffer(char *buf, int b) {
+    char line[BUFFERSIZE/2];
+    if (b>0) {
+        sprintf(buf, "%d bottle%s of beer on the wall, %d bottle%s of beer.\n" \
+                     "Take one down and pass it around, ", b, PLURALS(b), b, PLURALS(b));
+        if (b==1)
+            strcat(buf, "no more bottles of beer on the wall.\n");
+        else {
+            sprintf(line, "%d bottle%s of beer on the wall.\n", b-1, PLURALS(b-1));
+            strcat(buf, line);
+        }
+    } else {
+        sprintf(buf, "No more bottles of beer on the wall, no more bottles of beer.\n" \
+                     "Go to the store and buy some more, 99 bottles of beer on the wall.\n");
+    }
+}
+
+static ssize_t driver_read(struct file *instance, char *userbuffer, size_t count, loff_t *offset) {
+    struct _instance_data *iptr = (struct _instance_data *)instance->private_data;
+
+    int to_copy;
+    int not_copied;
+
+refillbuffer:
+    fill_buffer(iptr->buf, iptr->bottles);
+    iptr->bytes_avail = strlen(iptr->buf)+1;
+    to_copy = iptr->bytes_avail-iptr->bytes_sent;
+
+    if (to_copy>0) {
+        if (to_copy> count) to_copy=count;
+        not_copied=copy_to_user(userbuffer, iptr->buf+iptr->bytes_sent, to_copy);
+        iptr->bytes_sent += to_copy-not_copied;
+        return (to_copy-not_copied);
+    }
+
+    if ((to_copy==0) && (iptr->bottles>0)) {
+        iptr->bytes_sent=0; 
+        iptr->bottles--;
+        goto refillbuffer;
+    }
+
+    return 0;
+}
+
+int driver_open(struct inode *devicefile, struct file *instance)  {
+    struct _instance_data *iptr;
+    iptr = (struct _instance_data *)kmalloc(sizeof(struct _instance_data), GFP_KERNEL);
+    
+    if (!iptr) 
+        return -1;
+
+    iptr->bytes_sent = 0;
+    iptr->bottles = 99;
+    instance->private_data = iptr;
+
+    return 0;
+}
+
+int driver_close(struct inode *devicefile, struct file *instance)  {
+    if (instance->private_data)
+        kfree(instance->private_data);
+    return 0;
+}
+
+static struct file_operations fops = {
+    .owner   = THIS_MODULE,
+    .open    = driver_open,
+    .release = driver_close,
+    .read    = driver_read,
+};
+
+static int __init __init_module(void) {
+    if(register_chrdev(DRIVER_MAJOR, "99 Bottles of Beer", &fops) == 0) 
+        return 0;
+    return -EIO;
+}
+
+static void __exit __cleanup_module(void) {
+    unregister_chrdev(DRIVER_MAJOR, "99 Bottles of Beer");
+}
+
+module_init(__init_module);
+module_exit(__cleanup_module);
+</pre>
+    </div>
+</body>
+</html>
