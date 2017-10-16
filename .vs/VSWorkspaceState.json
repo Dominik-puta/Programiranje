@@ -1,12 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\C",
     "\\C++",
     "\\Csharp",
+    "\\CSS",
     "\\HTML",
     "\\Java",
     "\\Python"
   ],
-  "SelectedNode": "\\Java\\Java.css",
+  "SelectedNode": "\\CSS\\CSS.html",
   "PreviewInSolutionExplorer": false
 }

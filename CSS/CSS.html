@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+    <style type="text/css">
+        .auto-style3 {
+            width: 662px;
+        }
+        .auto-style4 {
+            width: 888px;
+            height: 281px;
+            margin-left: 23px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>CSS</h1>
+    </div>
+    <div class="topnav">
+        <a href="../index.html" class="fa fa-home" style="font-size: 24px"></a>
+        <a href="../Python/Python.html">Python</a>
+        <a href="../C++/C++.html">C++</a>
+        <a href="../Csharp/Csharp.html">C#</a>
+        <a href="../HTML/HTML.html">HTML</a>
+        <a href="../Java/Java.html">Java</a>
+        <a href="../C/C.html">C</a>
+        <a href="../CSS/CSS.html">CSS</a>
+        <a href="#">JS</a>
+        <a href="#">Swift</a>
+    </div>
+    <div class="box">
+        <h2>O CSS-u</h2>
+        <p>
+            CSS je kratica od (eng.) Cascading Style Sheets. Radi se stilskom jeziku, koji se rabi za opis prezentacije dokumenta napisanog pomoću markup (HTML) jezika.<br />
+            Kako se web razvijao, prvotno su u HTML ubacivani elementi za definiciju prezentacije (npr. tag &lt;font>),<br />
+            ali je dovoljno brzo uočena potreba za stilskim jezikom koji će HTML osloboditi potrebe prikazivanja sadržaja (što je prvenstvena namjena HTML-a) i njegovog oblikovanja (čemu danas služi CSS).<br />
+            Drugim riječima, stil definira kako prikazati HTML elemente. CSS-om se uređuje sam izgled i raspored stranice.<br />
+
+        </p>
+    </div>
+    <div class="box">
+        <h2>Sintaksa</h2>
+        <p>
+            Style sheet u CSS-u sastoji se od nekoliko pravila. Svako pravilo sastoji se od selectora i deklaracijskog bloka.
+            <h4>Selector</h4>
+            Selector označava dio markupa na koji se primjenjuje stil. Selector može biti:<br />
+            svi elementi istog tipa, npr. svi h2 elementi<br />
+            elementi određenog id ili class atributa:<br />
+            id: jedinstven element<br />
+            class: može obuhvaćati više od jednog elementa<br />
+            elementi u odnosu na druge elemente u DOM-u<br />
+            Pseudoklase su klase koje omogućuju opisivanje informacija koje nisu dostupne u DOM-u poput :hover koji identificira sadržaj samo ako korisnik drži pokazivač nad sadržajem.<br />
+            <h4>Deklaracijski blok</h4>
+            Deklaracijski blok su vitičaste zagrade unutar kojih se nalaze deklaracije. Svaka deklaracija sastoji se od svojstva, dvotočke (:) i vrijednosti. Između svake dvije uzastopne deklaracije mora se nalaziti točka zarez (;).<br />
+            Vrijednosti mogu biti ključne riječi poput "center" (sredina) i "inherit" (naslijedi), brojčane vrijednosti poput 100 (debljina fonta), 200px (200 piksela),<br />
+            50vw (50 % širine viewporta) ili 80% (80 % širine prozora). Vrijednosti boja mogu biti ključne riječi (npr. "red" za crveno), heksadecimalne vrijednosti (npr. #FF0000 ili #F00),<br />
+            RGB vrijednosti od 0 do 255 (npr. rgb(255, 0, 0)), RGBA vrijednosti koje uključuju i alpha prozirnost (npr. rgba(255, 0, 0, 0.8)) ili HSL/HSLA vrijednosti (npr. hsl(000, 100%, 50%), hsla(000, 100%, 50%, 80%)).<br />
+        </p>
+    </div>
+    <div class="box">
+        <table>
+            <tr>
+                <td class="auto-style3">
+                    <pre class="prettyprint">
+&lt;html>
+    &lt;head>
+        &lt;style>
+            body
+            {
+                background-color:yellowgreen;
+                color:red;
+            }
+        &lt;/style>
+    &lt;/head>
+    &lt;body>
+        &lt;p>Crveni paragraf.&lt;/p>
+    &lt;/body>
+&lt;/html>
+</pre>
+                </td>
+                <td >
+                    <div style="background-color: yellowgreen; color: red;" class="auto-style4">
+                        Crveni paragraf.
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>
